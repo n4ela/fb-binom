@@ -1,0 +1,6 @@
+AddDefaultCharset UTF-8
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !=/robots.txt
+RewriteCond  %{REQUEST_URI}  !^/offer/(.*)
+RewriteCond  %{REQUEST_URI}  !^/land/(.*)
+RewriteRule ^(.*)$ index.php\?link=$1 [L,QSA]
